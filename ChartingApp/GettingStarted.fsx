@@ -10,7 +10,6 @@
 #r "nuget: Plotly.NET.Interactive, {{fsdocs-package-version}}"
 #endif // IPYNB
 
-open System
 open XPlot.Plotly
 
 let xData = [-20. .. 0.02 .. 20.]

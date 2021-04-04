@@ -1,20 +1,24 @@
 ﻿// Learn more about F# at http://fsharp.org
 
-open System
+open FSharp.Plotly
 open Utility
 open GetttingStarted
 open SurfacePlotTemplate
 open SurfacePlots
 open ScatterPlot
 open PolarPlot
+open LinePlots3D
 
 [<EntryPoint>]
 let main argv =
 
     // Basic Two Dimensional plot
-    oscillatoryFunc.Show()
-    scatterPlot.Show()
-    polarChart.Show()
+    //oscillatoryFunc.Show()
+    //scatterPlot.Show()
+    //polarChart.Show()
+
+    // 3D-Line Plots
+
 
     // Surface Plots from SurfacePlotTemplate and SurfacePlots 
     //random3dChart.Show()
@@ -23,5 +27,7 @@ let main argv =
     //cone.Show()
     //paraboloid.Show()
     //hyperboloid.Show()
+
+
 
     0
