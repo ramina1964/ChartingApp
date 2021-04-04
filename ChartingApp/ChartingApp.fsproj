@@ -6,13 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="LinePlot3D.fs" />
     <Compile Include="Utility.fs" />
     <Compile Include="GetttingStarted.fs" />
     <None Include="GettingStarted.fsx" />
     <Compile Include="ScatterPlot.fs" />
-    <Compile Include="SurfacePlotTemplate.fs" />
     <Compile Include="PolarPlot.fs" />
+    <Compile Include="LinePlot3D.fs" />
+    <Compile Include="SurfacePlotTemplate.fs" />
     <Compile Include="SurfacePlots.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
