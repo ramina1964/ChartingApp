@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="SplineCharts.fs" />
+    <Compile Include="Utility.fs" />
+    <Compile Include="GetttingStarted.fs" />
+    <None Include="GettingStarted.fsx" />
+    <Compile Include="ScatterPlot.fs" />
+    <Compile Include="SurfacePlotTemplate.fs" />
+    <Compile Include="PolarPlot.fs" />
+    <Compile Include="SurfacePlots.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup />
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="XPlot.GoogleCharts" Version="3.0.1" />
+    <PackageReference Include="XPlot.Plotly" Version="4.0.1" />
+    <PackageReference Include="XPlot.Plotly.Interactive" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>
