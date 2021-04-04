@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="SplineChart.fs" />
+    <Compile Include="LinePlot3D.fs" />
     <Compile Include="Utility.fs" />
     <Compile Include="GetttingStarted.fs" />
     <None Include="GettingStarted.fsx" />
@@ -14,7 +14,6 @@
     <Compile Include="SurfacePlotTemplate.fs" />
     <Compile Include="PolarPlot.fs" />
     <Compile Include="SurfacePlots.fs" />
-    <Compile Include="LinePlots3D.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

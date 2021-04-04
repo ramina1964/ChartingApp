@@ -1,10 +1,10 @@
-﻿module LinePlots3D
+﻿module LinePlot3D
 
 
 open FSharp.Plotly
 open System
 
-let c = [ 0. .. 0.5 .. 15. ]
+let c = [ 0. .. 0.25 .. 15. ]
 
 let x, y, z =
     c
@@ -15,11 +15,9 @@ let x, y, z =
             (r * Math.Cos i', r * Math.Sin i', i'))
     |> List.unzip3
 
-let scatter3dLine =
+let helix =
     Chart.Scatter3d(x, y, z, StyleParam.Mode.Lines_Markers)
     |> Chart.withX_AxisStyle ("x-axis")
     |> Chart.withY_AxisStyle ("y-axis")
     |> Chart.withZ_AxisStyle ("z-axis")
     |> Chart.withSize (800., 800.)
-    |> Chart.BoxPlot
-

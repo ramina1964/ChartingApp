@@ -1,4 +1,4 @@
-﻿module SurfacePlots
+﻿module SurfacePlot
 
 open System
 open XPlot.Plotly

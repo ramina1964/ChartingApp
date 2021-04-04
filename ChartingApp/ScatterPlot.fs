@@ -1,5 +1,6 @@
 ﻿module ScatterPlot
 
+open FSharp.Plotly
 open XPlot.Plotly
 
 //  A Scatter Plot
@@ -15,10 +16,11 @@ let Madagascar = ["2004/05", 522.; "2005/06", 599.; "2006/07", 587.;
 let Average = ["2004/05", 614.6; "2005/06", 682.; "2006/07", 623.;
                "2007/08", 609.4; "2008/09", 569.6]
 
-type HobbsPearsonTrial =
-  { Radial : float list
-    Angular : obj list
-    Color : string }
+type HobbsPearsonTrial = {
+        Radial : float list
+        Angular : obj list
+        Color : string
+    }
 
 let HobbsPearson =
   [ { Radial = [6.804985785265978; 3.389596010612268; 5.3814721107464445; 8.059540219420184; 5.318229227868589;
@@ -190,15 +192,27 @@ let HobbsPearson =
       Color = "rgb(230,171,2)" } ]
 
 let traces =
-  [ for trial in HobbsPearson ->
-    Scatter(r = trial.Radial, t = trial.Angular,
-      mode = "markers", marker = Marker(color=trial.Color))]
+  [
+    for trial in HobbsPearson ->
+    Scatter(r = trial.Radial, t = trial.Angular, mode = "markers", marker = Marker(color = trial.Color))]
 
 let layout =
-  Layout(title = "Hobbs-Pearson Trials", showlegend = false,
-    plot_bgcolor = "rgb(223,223,223)")
+        Layout(title="Hobbs-Pearson Trials", showlegend = false, plot_bgcolor = "rgb(223,223,223)")
 
 let scatterPlot =
   traces
   |> Chart.Plot
   |> Chart.WithLayout layout
+  
+let x  = [1.; 2.; 3.; 4.; 5.; 6.; 7.; 8.; 9.; 10.; ]
+let y = [2.; 1.5; 5.; 1.5; 3.; 2.5; 2.5; 1.5; 3.5; 1.]
+  
+let spline = Chart.Spline(x,y,Name="spline")    
+  
+let splineWithMoreControl = 
+    Chart.Spline(
+        x,y,
+        Name="spline",
+        Smoothing = 0.4
+    )
+
