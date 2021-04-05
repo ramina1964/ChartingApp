@@ -1,5 +1,6 @@
 ﻿module GetttingStarted
 
+open FSharp.Plotly
 open XPlot.Plotly
 open Utility
 
@@ -13,9 +14,9 @@ let oscPoints = [for x in xData -> x, (oscFunc x)]
 
 // A Line Chart
 let layout =
-  Layout(title = "A Demping Oscillatory Function",
-         showlegend = false,
-         plot_bgcolor = "rgb(220, 220, 220")
+      Layout(title = "A Demping Oscillatory Function",
+             showlegend = false,
+             plot_bgcolor = "rgb(220, 220, 220")
 
 let oscillatoryFunc =
         oscPoints
@@ -25,3 +26,4 @@ let oscillatoryFunc =
         |> Chart.WithLayout layout
         |> Chart.WithXTitle "x"
         |> Chart.WithYTitle "y"
+

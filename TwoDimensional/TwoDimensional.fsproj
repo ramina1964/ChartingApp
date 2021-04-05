@@ -6,13 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="CheckingPlotly.fs" />
     <Compile Include="ScatterPoints.fs" />
     <Compile Include="PolarPoints.fs" />
     <Compile Include="Utility.fs" />
-    <Compile Include="ScatterPlot.fs" />
-    <Compile Include="PolarPlot.fs" />
     <None Include="GettingStarted.fsx" />
     <Compile Include="GetttingStarted.fs" />
+    <Compile Include="ScatterPlot.fs" />
+    <Compile Include="PolarPlot.fs" />
     <Compile Include="MultiplePlots.fs" />
   </ItemGroup>
 
