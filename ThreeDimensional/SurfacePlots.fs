@@ -41,27 +41,27 @@ let hat =
     Surface(z = (zHat xAxis yAxis))
     |> Chart.Plot
     |> Chart.WithLayout layout
-    |> Chart.WithWidth 900
-    |> Chart.WithHeight 900
+    |> Chart.WithWidth 1500
+    |> Chart.WithHeight 1200
 
 let cone =
     Surface(z = (zCone xAxis yAxis))
     |> Chart.Plot
     |> Chart.WithLayout layout
-    |> Chart.WithWidth 900
-    |> Chart.WithHeight 900
+    |> Chart.WithWidth 1500
+    |> Chart.WithHeight 1200
     
 let paraboloid =
     Surface(z = (zParaboloid xAxis yAxis))
     |> Chart.Plot
     |> Chart.WithLayout layout
-    |> Chart.WithWidth 1000
-    |> Chart.WithHeight 1000
+    |> Chart.WithWidth 1500
+    |> Chart.WithHeight 1200
 
 let hyperboloid =
     Surface(z = zHyperboloid xAxis yAxis)
     |> Chart.Plot
     |> Chart.WithLayout layout
-    |> Chart.WithWidth 1000
-    |> Chart.WithHeight 1000
+    |> Chart.WithWidth 1500
+    |> Chart.WithHeight 1200
     

@@ -1,29 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="C:\Users\ramin\.nuget\packages\xplot.plotly.interactive\4.0.1\contentFiles\any\any\Modules\XPlot.Plotly.Interactive\XPlot.Plotly.Interactive.psd1" />
+    <Compile Include="MultiplePlots.fs" />
+    <Compile Include="Utility.fs" />
+    <Compile Include="PolarPlot.fs" />
+    <Compile Include="ScatterPlot.fs" />
+    <Compile Include="GetttingStarted.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Program.fs" />
+    <None Include="GettingStarted.fsx" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FSharp.Plotly" Version="1.2.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="XPlot.GoogleCharts" Version="3.0.1" />
     <PackageReference Include="XPlot.Plotly" Version="4.0.1" />
     <PackageReference Include="XPlot.Plotly.Interactive" Version="4.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\THreeDimensional\ThreeDimensional.fsproj" />
-    <ProjectReference Include="..\TwoDimensional\TwoDimensional.fsproj" />
   </ItemGroup>
 
   <ItemGroup>
