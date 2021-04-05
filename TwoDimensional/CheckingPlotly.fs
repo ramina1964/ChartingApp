@@ -39,7 +39,7 @@ let myXAxis () =
         Mirror = StyleParam.Mirror.All,
         Range = StyleParam.Range.MinMax(xMinMax),
         Tickmode = StyleParam.TickMode.Array,
-        Tickvals = ([| xMin .. (0.5 * System.Math.PI) .. xMax |] |> Array.map (round 2)),
+        Tickvals = ([| xMin .. (0.5 * System.Math.PI) .. xMax |] |> Array.map (Math.Truncate)),
         Ticks = StyleParam.TickOptions.Inside
     )
 
