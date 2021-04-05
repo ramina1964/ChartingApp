@@ -17,22 +17,22 @@ open SurfacePlot
 let main argv =
 
     // Two-Dimensional Plot
-    //oscillatoryFunc.Show()
-    //scatterPlot.Show()
-    //spline |> Chart.Show 
-    //splineWithMoreControl |> Chart.Show
-    //polarChart.Show()
+    oscillatoryFunc.Show()
+    scatterPlot.Show()
+    spline |> Chart.Show 
+    splineWithMoreControl |> Chart.Show
+    polarChart.Show()
     combinedChart |> Chart.Show
 
     // Three-Dimensional Curve plot
-    //helix |> Chart.Show
-    //random3dChart.Show()
+    helix |> Chart.Show
+    random3dChart.Show()
     
     // Three-Dimensional Surface and Mesh plot
-    //rollerCoaster.Show()
-    //hat.Show()
-    //cone.Show()
-    //paraboloid.Show()
-    //hyperboloid.Show()
+    rollerCoaster.Show()
+    hat.Show()
+    cone.Show()
+    paraboloid.Show()
+    hyperboloid.Show()
 
     0
