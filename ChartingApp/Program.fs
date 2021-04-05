@@ -6,7 +6,7 @@ open Utility
 open GetttingStarted
 open ScatterPlot
 open PolarPlot
-open MultiplePlots
+open CombinedPlots
 open CheckingPlotly
 
 // 3D-Charts
@@ -23,11 +23,16 @@ let main argv =
     //spline |> Chart.Show 
     //splineWithMoreControl |> Chart.Show
     //polarChart.Show()
+    //cosPlot |> Chart.Show
+    //cosPlotStyled |> Chart.Show
+    //sinChartStyled |> Chart.Show
     //combinedChart |> Chart.Show
+    mirroredSinChart |> Chart.Show
 
     // Three-Dimensional Curve plot
     //helix |> Chart.Show
     //random3dChart.Show()
+
     
     // Three-Dimensional Surface and Mesh plot
     //rollerCoaster.Show()

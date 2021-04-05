@@ -26,4 +26,3 @@ let oscillatoryFunc =
         |> Chart.WithLayout layout
         |> Chart.WithXTitle "x"
         |> Chart.WithYTitle "y"
-

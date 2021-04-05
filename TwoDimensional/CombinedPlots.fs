@@ -1,19 +1,23 @@
-﻿module MultiplePlots
+﻿module CombinedPlots
+
+open System
+open XPlot.GoogleCharts
 open FSharp.Plotly
+open FSharp.Plotly.Colors
 
 
-let x = [1.; 2.; 3.; 4.; 5.; 6.; 7.; 8.; 9.; 10.; ]
-let y = [2.; 1.5; 5.; 1.5; 3.; 2.5; 2.5; 1.5; 3.5; 1.]
+//let x = [1.; 2.; 3.; 4.; 5.; 6.; 7.; 8.; 9.; 10.; ]
+//let y = [2.; 1.5; 5.; 1.5; 3.; 2.5; 2.5; 1.5; 3.5; 1.]
 
-let combinedChart = 
-    [
-        Chart.Line(x, y, Name="Fst")
-        Chart.Line(y, x, Name="Snd")
-    ]
-    |> Chart.Combine
+//let combinedChart = 
+//    [
+//        Chart.Line(x, y, Name="Fst")
+//        Chart.Line(y, x, Name="Snd")
+//    ]
+//    |> Chart.Combine
 
-// Chart subplot grids
-//simple 3x3 subplot grid
+////Chart subplot grids
+////simple 3x3 subplot grid
 //let grid = 
 //    Chart.Grid(
 //        [
