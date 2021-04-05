@@ -2,6 +2,7 @@
 
 
 open FSharp.Plotly
+open XPlot.Plotly
 open System
 
 let c = [ 0. .. 0.25 .. 15. ]
@@ -21,3 +22,5 @@ let helix =
     |> Chart.withY_AxisStyle ("y-axis")
     |> Chart.withZ_AxisStyle ("z-axis")
     |> Chart.withSize (800., 800.)
+
+

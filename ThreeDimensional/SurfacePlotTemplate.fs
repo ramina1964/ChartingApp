@@ -27,6 +27,8 @@ let layout =
 let random3dChart =
     Surface(z = z)
     |> Chart.Plot
+    |> Chart.WithId("3D Random-Walk")
+    |> Chart.WithTitle("3D Random-Walk")
     |> Chart.WithLayout layout
     |> Chart.WithWidth 700
     |> Chart.WithHeight 500
@@ -45,4 +47,7 @@ let zRollerCoaster =
 let rollerCoaster = 
     Surface(z = zRollerCoaster)
     |> Chart.Plot
+    |> Chart.WithId("Roller Coaster")
+    |> Chart.WithTitle("Roller Coaster")
+
 

@@ -34,6 +34,8 @@ let layout =
 let hat =
     Surface(z = (zHat xAxis yAxis))
     |> Chart.Plot
+    |> Chart.WithId("Mexican Hat")
+    |> Chart.WithTitle("Mexican Hat")
     |> Chart.WithLayout layout
     |> Chart.WithWidth 1500
     |> Chart.WithHeight 1200
@@ -41,6 +43,8 @@ let hat =
 let cone =
     Surface(z = (zCone xAxis yAxis))
     |> Chart.Plot
+    |> Chart.WithId("Cone")
+    |> Chart.WithTitle("Cone")
     |> Chart.WithLayout layout
     |> Chart.WithWidth 1500
     |> Chart.WithHeight 1200
@@ -48,6 +52,8 @@ let cone =
 let paraboloid =
     Surface(z = (zParaboloid xAxis yAxis))
     |> Chart.Plot
+    |> Chart.WithId("Paraboloid")
+    |> Chart.WithTitle("Paraboloid")
     |> Chart.WithLayout layout
     |> Chart.WithWidth 1500
     |> Chart.WithHeight 1200
@@ -55,6 +61,8 @@ let paraboloid =
 let hyperboloid =
     Surface(z = zHyperboloid xAxis yAxis)
     |> Chart.Plot
+    |> Chart.WithId("Hyperboloid")
+    |> Chart.WithTitle("Hyperboloid")
     |> Chart.WithLayout layout
     |> Chart.WithWidth 1500
     |> Chart.WithHeight 1200

@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="StylingAxes.fs" />
     <Compile Include="CheckingPlotly.fs" />
     <Compile Include="ScatterPoints.fs" />
     <Compile Include="PolarPoints.fs" />

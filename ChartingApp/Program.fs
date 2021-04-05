@@ -23,11 +23,10 @@ let main argv =
     //spline |> Chart.Show 
     //splineWithMoreControl |> Chart.Show
     //polarChart.Show()
-    //cosPlot |> Chart.Show
-    //cosPlotStyled |> Chart.Show
-    //sinChartStyled |> Chart.Show
-    //combinedChart |> Chart.Show
-    mirroredSinChart |> Chart.Show
+    let y = cosData
+    cosPlotStyled |> Chart.Show
+    //sinePlotStyled |> Chart.Show
+    //mirroredSinChart |> Chart.Show
 
     // Three-Dimensional Curve plot
     //helix |> Chart.Show
@@ -35,10 +34,10 @@ let main argv =
 
     
     // Three-Dimensional Surface and Mesh plot
-    //rollerCoaster.Show()
-    //hat.Show()
-    //cone.Show()
-    //paraboloid.Show()
-    //hyperboloid.Show()
+    rollerCoaster.Show()
+    hat.Show()
+    cone.Show()
+    paraboloid.Show()
+    hyperboloid.Show()
 
     0

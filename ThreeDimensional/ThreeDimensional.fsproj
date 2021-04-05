@@ -7,8 +7,8 @@
 
   <ItemGroup>
     <Compile Include="LinePlot3D.fs" />
-    <Compile Include="SurfacePlots.fs" />
     <Compile Include="SurfacePlotTemplate.fs" />
+    <Compile Include="SurfacePlots.fs" />
   </ItemGroup>
 
   <ItemGroup>
