@@ -8,6 +8,7 @@ open System
 open XPlot.Plotly
 open Utility
 
+
 let z =
     let rnd = Random()
     [ for _ in 1 .. 25 ->

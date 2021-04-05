@@ -1,4 +1,6 @@
 ﻿module ScatterPoints
+
+
 let Bolivia =
 
     [ "2004/05", 165.

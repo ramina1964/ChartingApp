@@ -12,6 +12,7 @@
 
 open XPlot.Plotly
 
+
 let xData = [-20. .. 0.02 .. 20.]
 
 let oscFunc x =

@@ -26,16 +26,13 @@ let myXAxis () =
         Ticks = StyleParam.TickOptions.Inside
     )
 
-let myYAxis () =
+let myYAxis (yMin, yMax) =
     Axis.LinearAxis.init (
         Title = "y",
         Showgrid = true,
         Showline = true,
         Mirror = StyleParam.Mirror.AllTicks,
-        Range = StyleParam.Range.MinMax(-1., 1.),
+        Range = StyleParam.Range.MinMax(yMin, yMax),
         Tickmode = StyleParam.TickMode.Auto,
         Ticks = StyleParam.TickOptions.Inside
     )
-
-
-

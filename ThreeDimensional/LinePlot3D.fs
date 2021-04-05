@@ -1,9 +1,9 @@
 ﻿module LinePlot3D
 
-
 open FSharp.Plotly
 open XPlot.Plotly
 open System
+
 
 let c = [ 0. .. 0.25 .. 15. ]
 

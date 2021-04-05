@@ -1,6 +1,5 @@
 ﻿module GetttingStarted
 
-open FSharp.Plotly
 open XPlot.Plotly
 open Utility
 

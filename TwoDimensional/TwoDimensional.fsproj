@@ -15,7 +15,7 @@
     <Compile Include="GetttingStarted.fs" />
     <Compile Include="ScatterPlot.fs" />
     <Compile Include="PolarPlot.fs" />
-    <Compile Include="CombinedPlots.fs" />
+    <Compile Include="CombinedPlot.fs" />
   </ItemGroup>
 
   <ItemGroup>
