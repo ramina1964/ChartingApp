@@ -3,6 +3,7 @@
 open XPlot.Plotly
 open Utility
 
+
 let xData = linspace(-20., 20., 801)
 let points = [ for x in xData -> (x, x * x) ]
 

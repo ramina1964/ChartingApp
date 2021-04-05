@@ -1,6 +1,6 @@
-﻿
-open FSharp.Plotly
+﻿open FSharp.Plotly
 open Utility
+
 
 // 2D-Charts
 open GetttingStarted
@@ -19,7 +19,7 @@ let main argv =
     // Two-Dimensional Plot
     //oscillatoryFunc.Show()
     //scatterPlot.Show()
-    //spline |> Chart.Show
+    //spline |> Chart.Show 
     //splineWithMoreControl |> Chart.Show
     //polarChart.Show()
     combinedChart |> Chart.Show

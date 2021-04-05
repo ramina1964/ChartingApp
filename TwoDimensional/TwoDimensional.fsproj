@@ -6,16 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="MultiplePlots.fs" />
+    <Compile Include="ScatterPoints.fs" />
+    <Compile Include="PolarPoints.fs" />
     <Compile Include="Utility.fs" />
-    <Compile Include="PolarPlot.fs" />
     <Compile Include="ScatterPlot.fs" />
+    <Compile Include="PolarPlot.fs" />
+    <None Include="GettingStarted.fsx" />
     <Compile Include="GetttingStarted.fs" />
+    <Compile Include="MultiplePlots.fs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="GettingStarted.fsx" />
-  </ItemGroup>
+  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="FSharp.Plotly" Version="1.2.2" />

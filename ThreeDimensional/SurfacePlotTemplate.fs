@@ -4,21 +4,6 @@
 //#r "../../bin/XPlot.Plotly/netstandard2.0/XPlot.Plotly.dll"
 //#r "../../packages/Newtonsoft.Json/lib/netstandard2.0/Newtonsoft.Json.dll"
 
-(*** condition: ipynb ***)
-#if IPYNB
-#i "nuget:https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json"
-#i "nuget:https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json"
-#r "nuget: XPlot.Plotly"
-#r "nuget: XPlot.Plotly.Interactive"
-#endif // IPYNB
-
-(**
-Plotly 3D Surface Plots
-[![Binder](https://mybinder.org/badge_logo.svg)]
-    (https://mybinder.org/v2/gh/fslaborg/XPlot/gh-pages?filepath=plotly-3d-surface-plots.ipynb)
-Topographical 3D Surface Plot
------------------------------
-*)
 open System
 open XPlot.Plotly
 open Utility
@@ -45,10 +30,6 @@ let random3dChart =
     |> Chart.WithLayout layout
     |> Chart.WithWidth 700
     |> Chart.WithHeight 500
-(*** condition: ipynb ***)
-#if IPYNB
-chart
-#endif // IPYNB
 
 //---------------------- Generate Linearly Spaced Vector ----------------------
 let size = 100

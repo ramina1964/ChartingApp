@@ -28,13 +28,7 @@ let zHyperboloid xValues yValues = zCoord HyperboloidSur xValues yValues
 let layout =
     Layout(
         autosize = false,
-        margin =
-            Margin(
-                l = 65.,
-                r = 50.,
-                b = 65.,
-                t = 90.
-            )
+        margin = Margin(l = 65., r = 50., b = 65., t = 90.)
     )
 
 let hat =

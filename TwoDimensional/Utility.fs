@@ -1,5 +1,6 @@
 ﻿module Utility
 
+
 // A list of n floating point numbers between min and max, inclusively
 let linspace (min, max, n) = 
     if n <= 2 then failwithf "n needs to be larger then 2"

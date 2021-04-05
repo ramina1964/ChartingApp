@@ -1,7 +1,4 @@
 ﻿module MultiplePlots
-
-open XPlot.GoogleCharts
-open XPlot.Plotly
 open FSharp.Plotly
 
 
@@ -32,13 +29,14 @@ let combinedChart =
 //        |> Chart.withY_AxisStyle("This title must")
 
 //        Chart.Line(x,y) 
-//        |> Chart.withY_AxisStyle("be set on the",Zeroline=false)
+//        |> Chart.withY_AxisStyle("be set on the", Zeroline=false)
         
 //        Chart.Spline(x,y) 
-//        |> Chart.withY_AxisStyle("respective subplots",Zeroline=false)
+//        |> Chart.withY_AxisStyle("respective subplots", Zeroline=false)
 //    ]
 //    |> Chart.SingleStack
 //    //move xAxis to bottom and increase spacing between plots by using the withLayoutGridStyle function
-//    |> Chart.withLayoutGridStyle(XSide=StyleParam.LayoutGridXSide.Bottom,YGap= 0.1)
+//    |> Chart.withLayoutGridStyle(XSide=StyleParam.LayoutGridXSide.Bottom,YGap = 0.1)
 //    |> Chart.withTitle("Hi i am the new SingleStackChart")
 //    |> Chart.withX_AxisStyle("im the shared xAxis")
+
