@@ -7,6 +7,7 @@ open ScatterPlot
 open CheckingPlotly
 open PolarPlot
 open CombinedPlot
+open CheckingPlotly
 
 // 3D-Charts
 open LinePlot3D
@@ -27,17 +28,18 @@ let main argv =
     //sinePlotStyled |> Chart.Show
     //mirroredSinChart |> Chart.Show
     //combinedSinCos |> Chart.Show
-    //stackedSinCos |> Chart.Show
+    stackedSinCos |> Chart.Show
+    mirroredOscExpChart |> Chart.Show
 
     // Three-Dimensional Curve plot
     //helix |> Chart.Show
     //random3dChart.Show()
     
     // Three-Dimensional Surface and Mesh plot
-    rollerCoaster.Show()
-    hat.Show()
-    cone.Show()
-    paraboloid.Show()
-    hyperboloid.Show()
+    //rollerCoaster.Show()
+    //hat.Show()
+    //cone.Show()
+    //paraboloid.Show()
+    //hyperboloid.Show()
 
     0

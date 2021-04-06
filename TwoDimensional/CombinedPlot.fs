@@ -16,7 +16,7 @@ let combinedSinCos =
     ]
     |> Chart.Combine
     |> Chart.withTitle ("sin(x) and cos(x)")
-    |> Chart.withX_Axis (myXAxis ())
+    |> Chart.withX_Axis (myXAxis xMin)
     |> Chart.withY_Axis (myYAxis (yMinSin, yMaxSin))
     |> Chart.withSize (750., 750.)
 
@@ -25,12 +25,12 @@ let stackedSinCos =
     [
         Chart.Spline(xData, xData |> List.map sin)
         |> Chart.withTraceName(Name="sin(x)")
-        |> Chart.withX_Axis(myXAxis ())
+        |> Chart.withX_Axis(myXAxis xMin)
         |> Chart.withY_Axis(myYAxis (yMinSin, yMaxSin))
 
         Chart.Spline(xData, xData|> List.map cos)
         |> Chart.withTraceName(Name="cos(x)")
-        |> Chart.withX_Axis(myXAxis ())
+        |> Chart.withX_Axis(myXAxis xMin)
         |> Chart.withY_Axis(myYAxis (yMinSin, yMaxSin))
     ]
-    |> Chart.Stack(1, 0.1)
+    |> Chart.Stack(1, 0.20)

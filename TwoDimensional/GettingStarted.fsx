@@ -4,6 +4,9 @@
 // Path of XPlot.Plotly.dll relative to the solution file
 #r "../ChartingApp/bin/Debug/net5.0/XPlot.Plotly.dll"
 
+// Find out how to load modules used in this one
+//#l "../ChartingApp/Common/MathFunctions"
+
 (*** condition: ipynb ***)
 #if IPYNB
 #r "nuget: Plotly.NET, {{fsdocs-package-version}}"
@@ -12,12 +15,8 @@
 
 open XPlot.Plotly
 
-
-let xData = [-20. .. 0.02 .. 20.]
-
-let oscFunc x =
-    System.Math.Sin(x) / x
-let oscPoints = [for x in xData -> x, (oscFunc x)]
+let xOscData = [-20. .. 0.02 .. 20.]
+let oscPoints = [for x in xOscData -> x, (System.Math.Sin(x) / x)]
 
 // A line chart
 let oscillatoryFunc =

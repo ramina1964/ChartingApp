@@ -2,8 +2,10 @@
 
 open FSharp.Plotly.Colors
 open FSharp.Plotly
+open System
 open StylingAxes
 open MathFunctions
+open Utility
 
 
 // Do not use these options for Symbol, because the plot will vanish:
@@ -40,9 +42,10 @@ let sinePlotStyled =
     |> Chart.withX_AxisStyle ("x", Showline = true, Showgrid = true, MinMax = xMinMax)
     |> Chart.withY_AxisStyle ("y", Showline = true, Showgrid = true)
 
-// Sine function with mirrored axes
-let yMin = sineData |> List.min
-let yMax = sineData |> List.max
+// Sine and cosine functions with mirrored axes
+// These functions have the same yMin and yMax
+let ySineMin = sineData |> List.min
+let ySineMax = sineData |> List.max
 let mirroredSinChart =
     Chart.Point(xData, sineData)
     |> Chart.withMarkerStyle (
@@ -51,6 +54,30 @@ let mirroredSinChart =
         Symbol = StyleParam.Symbol.Square
     )
     |> Chart.withTitle ("sin(x) with Mirror Axes")
-    |> Chart.withX_Axis (myXAxis ())
-    |> Chart.withY_Axis (myYAxis (yMin, yMax))
+    |> Chart.withX_Axis (myXAxis xMin)
+    |> Chart.withY_Axis (myYAxis (ySineMin, ySineMax))
+    |> Chart.withSize (750., 750.)
+
+// Sine and cosine functions with mirrored axes
+// These functions have the same yMin and yMax
+let xOscExpMin = -3.16
+let xOscExpMax = 2.5
+let xOscExpData = linspace(xOscExpMin, xOscExpMax, 2501)
+let yOscExpData = xOscExpData |> Array.map (fun x -> Math.Exp(-x) * Math.Sin(x) )
+let yOscExpMin = yOscExpData |> Array.min
+let yOscExpMax = yOscExpData |> Array.max
+let mirroredOscExpChart =
+    Chart.Point(xOscExpData, yOscExpData)
+    |> Chart.withMarkerStyle (
+        Size = 3,
+        Color = (Table.Office.darkGreen |> toWebColor),
+        Symbol = StyleParam.Symbol.Square
+    )
+    //|> Chart.withTitle ("exp(-x) * sin(x) with Mirror Axes")
+    |> Chart.withTitle ("y = exp(-x) * sin(x)")
+    //|> Chart.withX_Axis (myXAxis -1.)
+    //|> Chart.withY_Axis (myYAxis (yOscExpMin, yOscExpMax))
+    |> Chart.withX_AxisStyle ("x", Showline = true, Showgrid = true, MinMax = (xOscExpMin, xOscExpMax))
+    |> Chart.withY_AxisStyle ("y", Showline = true, Showgrid = true)
+
     |> Chart.withSize (750., 750.)
