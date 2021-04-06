@@ -6,7 +6,7 @@
 
 open System
 open XPlot.Plotly
-open Utility
+open MathFunctions
 
 
 let z =
@@ -34,16 +34,11 @@ let random3dChart =
     |> Chart.WithWidth 700
     |> Chart.WithHeight 500
 
-//---------------------- Generate Linearly Spaced Vector ----------------------
-let size = 100
-let x = linspace(-5., 5., size)
-let y = linspace(-5., 5., size)
 
 let RollerCoasterSur x y = - (5. * x / (x**2. + y**2. + 1. ))
-
 let zRollerCoaster = 
-    Array.init size (fun i -> 
-        Array.init size (fun j -> RollerCoasterSur x.[j] y.[i] ))
+    Array.init sizeRollerCoaster (fun i -> 
+        Array.init sizeRollerCoaster (fun j -> RollerCoasterSur xRollerCoaster.[j] yRollerCoaster.[i] ))
 
 let rollerCoaster = 
     Surface(z = zRollerCoaster)

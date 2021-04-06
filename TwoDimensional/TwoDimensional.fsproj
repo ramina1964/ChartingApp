@@ -10,7 +10,6 @@
     <Compile Include="CheckingPlotly.fs" />
     <Compile Include="ScatterPoints.fs" />
     <Compile Include="PolarPoints.fs" />
-    <Compile Include="Utility.fs" />
     <None Include="GettingStarted.fsx" />
     <Compile Include="GetttingStarted.fs" />
     <Compile Include="ScatterPlot.fs" />
@@ -24,6 +23,10 @@
     <PackageReference Include="XPlot.GoogleCharts" Version="3.0.1" />
     <PackageReference Include="XPlot.Plotly" Version="4.0.1" />
     <PackageReference Include="XPlot.Plotly.Interactive" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.fsproj" />
   </ItemGroup>
 
   <ItemGroup>

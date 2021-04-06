@@ -7,7 +7,6 @@ let linspace (min, max, n) =
     let inc = float (max - min) / (float n - 1.)
     Array.init n (fun i -> min + (inc * float i))
 
-// Given x-values, y-values and a function, return z-coordinates of the function
-let zCoord func xValues yValues = 
-    [ for x in xValues ->
-        [ for y in yValues -> (func x y) ]]
+// Given a floating point number, round it to one decimal place. 
+let roundedFunc number = sprintf "%.1f" number
+

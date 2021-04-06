@@ -1,9 +1,9 @@
 ﻿module CheckingPlotly
 
-open System
 open FSharp.Plotly.Colors
 open FSharp.Plotly
 open StylingAxes
+open MathFunctions
 
 
 // Do not use these options for Symbol, because the plot will vanish:
@@ -17,7 +17,6 @@ open StylingAxes
 // Symbol = StyleParam.Symbol.YLeft
 // Symbol = StyleParam.Symbol.YRight
 // Symbol = StyleParam.Symbol.YUp
-let cosData = xData |> List.map Math.Cos
 let cosPlotStyled =
     Chart.Point(xData, cosData)
     |> Chart.withMarkerStyle (
@@ -30,7 +29,6 @@ let cosPlotStyled =
     |> Chart.withY_AxisStyle ("y", Showline = true, Showgrid = true)
 
  // A more functional style
-let sineData = xData |> List.map Math.Sin
 let sinePlotStyled =
     Chart.Point(xData, sineData)
     |> Chart.withMarkerStyle (

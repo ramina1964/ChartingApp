@@ -1,18 +1,9 @@
 ﻿module StylingAxes
 
-open System
+open Utility
 open FSharp.Plotly
+open MathFunctions
 
-
-// Construct x- and y-axes
-let xMin = -Math.PI
-let xMax = Math.PI
-let steplength = 0.04
-let xData = [xMin .. steplength .. xMax]
-let xMinMax = (xMin, xMax)
-
-// Given a floating point number, round it to one decimal place
-let roundFunc number = sprintf "%.1f" number
 
 let myXAxis () =
     Axis.LinearAxis.init (
@@ -22,7 +13,7 @@ let myXAxis () =
         Mirror = StyleParam.Mirror.AllTicks,
         Range = StyleParam.Range.MinMax(xMinMax),
         Tickmode = StyleParam.TickMode.Array,
-        Tickvals = ([xMin .. (0.5 * System.Math.PI) .. xMax] |> (List.map roundFunc)),
+        Tickvals = ([xMin .. (0.5 * System.Math.PI) .. xMax] |> (List.map roundedFunc)),
         Ticks = StyleParam.TickOptions.Inside
     )
 

@@ -1,17 +1,12 @@
 ﻿module CombinedPlot
 
-open System
-open XPlot.GoogleCharts
 open FSharp.Plotly
-open FSharp.Plotly.Colors
-open XPlot.GoogleCharts.Html
-
-open Utility
+open MathFunctions
 open StylingAxes
-open CheckingPlotly
 
-let yMin = sineData |> List.min
-let yMax = sineData |> List.max
+
+let yMinSin = sineData |> List.min
+let yMaxSin = sineData |> List.max
 
 // Combining Charts in the same plot
 let combinedSinCos =
@@ -22,20 +17,20 @@ let combinedSinCos =
     |> Chart.Combine
     |> Chart.withTitle ("sin(x) and cos(x)")
     |> Chart.withX_Axis (myXAxis ())
-    |> Chart.withY_Axis (myYAxis (yMin, yMax))
+    |> Chart.withY_Axis (myYAxis (yMinSin, yMaxSin))
     |> Chart.withSize (750., 750.)
 
 // Stacking Charts above each other
-let stackedChart = 
+let stackedSinCos = 
     [
         Chart.Spline(xData, xData |> List.map sin)
         |> Chart.withTraceName(Name="sin(x)")
         |> Chart.withX_Axis(myXAxis ())
-        |> Chart.withY_Axis(myYAxis (yMin, yMax))
+        |> Chart.withY_Axis(myYAxis (yMinSin, yMaxSin))
 
         Chart.Spline(xData, xData|> List.map cos)
         |> Chart.withTraceName(Name="cos(x)")
         |> Chart.withX_Axis(myXAxis ())
-        |> Chart.withY_Axis(myYAxis (yMin, yMax))
+        |> Chart.withY_Axis(myYAxis (yMinSin, yMaxSin))
     ]
     |> Chart.Stack(1, 0.1)

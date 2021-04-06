@@ -1,31 +1,9 @@
 ﻿module SurfacePlot
 
-open System
 open XPlot.Plotly
-open Utility
+open MathFunctions
 
-
-let size = 51
-let xMax = 5.
-let xMin = -xMax
-let yMax = 5.
-let yMin = -yMax
  
-let xAxis = linspace(xMin, xMax, size)
-let yAxis = linspace(yMin, yMax, size)
-
-// Define some surface functions
-let hatSur x y = Math.Sin(Math.Sqrt(x ** 2. + y ** 2.))
-let ConeSur x y = Math.Sqrt(x ** 2. + y ** 2.)
-let ParaboloidSur x y = x ** 2. + y ** 2.
-let HyperboloidSur (x: float) (y: float) = x ** 2. - y ** 2.
-
-// Apply zCoord Function to the surfaces above 
-let zHat xValues yValues = zCoord hatSur xValues yValues
-let zCone xValues yValues = zCoord ConeSur xValues yValues
-let zParaboloid xValues yValues = zCoord ParaboloidSur xValues yValues
-let zHyperboloid xValues yValues = zCoord HyperboloidSur xValues yValues
-
 let layout =
     Layout(
         autosize = false,
@@ -33,7 +11,7 @@ let layout =
     )
 
 let hat =
-    Surface(z = (zHat xAxis yAxis))
+    Surface(z = (zHat xAxis3D yAxis3D))
     |> Chart.Plot
     |> Chart.WithId("Mexican Hat")
     |> Chart.WithTitle("Mexican Hat")
@@ -42,7 +20,7 @@ let hat =
     |> Chart.WithHeight 1200
 
 let cone =
-    Surface(z = (zCone xAxis yAxis))
+    Surface(z = (zCone xAxis3D yAxis3D))
     |> Chart.Plot
     |> Chart.WithId("Cone")
     |> Chart.WithTitle("Cone")
@@ -51,7 +29,7 @@ let cone =
     |> Chart.WithHeight 1200
     
 let paraboloid =
-    Surface(z = (zParaboloid xAxis yAxis))
+    Surface(z = (zParaboloid xAxis3D yAxis3D))
     |> Chart.Plot
     |> Chart.WithId("Paraboloid")
     |> Chart.WithTitle("Paraboloid")
@@ -60,7 +38,7 @@ let paraboloid =
     |> Chart.WithHeight 1200
 
 let hyperboloid =
-    Surface(z = zHyperboloid xAxis yAxis)
+    Surface(z = zHyperboloid xAxis3D yAxis3D)
     |> Chart.Plot
     |> Chart.WithId("Hyperboloid")
     |> Chart.WithTitle("Hyperboloid")

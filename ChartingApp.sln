@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ChartingApp", "ChartingApp\ChartingApp.fsproj", "{1CFC702D-42E7-49F3-B873-B265A1B79D4B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TwoDimensional", "TwoDimensional\TwoDimensional.fsproj", "{4E6E951F-6E7E-400B-82D8-DD233AF07038}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "TwoDimensional", "TwoDimensional\TwoDimensional.fsproj", "{4E6E951F-6E7E-400B-82D8-DD233AF07038}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThreeDimensional", "THreeDimensional\ThreeDimensional.fsproj", "{5BF99D7D-46DB-4B49-89B3-5758F351C831}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ThreeDimensional", "THreeDimensional\ThreeDimensional.fsproj", "{5BF99D7D-46DB-4B49-89B3-5758F351C831}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Common", "Common\Common.fsproj", "{D61E2CB6-CC41-486E-9D5B-B806E8E6969C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5BF99D7D-46DB-4B49-89B3-5758F351C831}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BF99D7D-46DB-4B49-89B3-5758F351C831}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BF99D7D-46DB-4B49-89B3-5758F351C831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61E2CB6-CC41-486E-9D5B-B806E8E6969C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61E2CB6-CC41-486E-9D5B-B806E8E6969C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61E2CB6-CC41-486E-9D5B-B806E8E6969C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61E2CB6-CC41-486E-9D5B-B806E8E6969C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
