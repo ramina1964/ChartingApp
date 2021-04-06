@@ -3,9 +3,9 @@
 open FSharp.Plotly.Colors
 open FSharp.Plotly
 open System
-open StylingAxes
 open MathFunctions
 open Utility
+open StylingAxes
 
 
 // Do not use these options for Symbol, because the plot will vanish:

@@ -32,14 +32,14 @@ let main argv =
     //mirroredOscExpChart |> Chart.Show
 
     // Three-Dimensional Curve plot
-    //helix |> Chart.Show
-    //random3dChart.Show()
+    helix |> Chart.Show
+    random3dChart.Show()
     
     // Three-Dimensional Surface and Mesh plot
-    //rollerCoaster.Show()
-    //hat.Show()
-    //cone.Show()
+    rollerCoaster.Show()
+    hat.Show()
+    cone.Show()
     paraboloid.Show()
-    //hyperboloid.Show()
+    hyperboloid.Show()
 
     0

@@ -1,8 +1,8 @@
 ﻿module StylingAxes
 
 open FSharp.Plotly
-open Utility
 open MathFunctions
+open Utility
 
 
 // Mirrored x-axis

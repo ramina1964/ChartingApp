@@ -10,20 +10,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Common\Utility.fs" />
+    <Compile Include="Common\MathFunctions.fs" />
+    <Compile Include="Common\StylingAxes.fs" />
+    <Compile Include="TwoDimensional\PolarPoints.fs" />
+    <Compile Include="TwoDimensional\ScatterPoints.fs" />
+    <Compile Include="TwoDimensional\ScatterPlot.fs" />
+    <None Include="TwoDimensional\GettingStarted.fsx" />
+    <Compile Include="TwoDimensional\GetttingStarted.fs" />
+    <Compile Include="TwoDimensional\CheckingPlotly.fs" />
+    <Compile Include="TwoDimensional\PolarPlot.fs" />
+    <Compile Include="TwoDimensional\CombinedPlot.fs" />
+    <Compile Include="ThreeDimensional\LinePlot3D.fs" />
+    <Compile Include="ThreeDimensional\SurfacePlotTemplate.fs" />
+    <Compile Include="ThreeDimensional\SurfacePlots.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FSharp.Plotly" Version="1.2.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="XPlot.GoogleCharts" Version="3.0.1" />
     <PackageReference Include="XPlot.Plotly" Version="4.0.1" />
     <PackageReference Include="XPlot.Plotly.Interactive" Version="4.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\THreeDimensional\ThreeDimensional.fsproj" />
-    <ProjectReference Include="..\TwoDimensional\TwoDimensional.fsproj" />
   </ItemGroup>
 
   <ItemGroup>
