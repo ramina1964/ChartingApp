@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="StylingAxes.fs" />
     <Compile Include="ScatterPoints.fs" />
     <Compile Include="PolarPoints.fs" />
     <None Include="GettingStarted.fsx" />

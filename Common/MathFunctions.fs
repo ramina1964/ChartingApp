@@ -8,8 +8,8 @@ open Utility
 let xMin = -Math.PI
 let xMax = Math.PI
 let steplength = 0.04
-let xMinMax = (xMin, xMax)
 let xData = [xMin .. steplength .. xMax]
+let xMinMax = (xMin, xMax)
 
 // X-axis for oscillatory function
 let xOscData = linspace(-20., 20., 801)

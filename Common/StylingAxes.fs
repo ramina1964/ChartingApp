@@ -1,13 +1,13 @@
 ﻿module StylingAxes
 
-open Utility
 open FSharp.Plotly
+open Utility
 open MathFunctions
 
 
 let myXAxis () =
     Axis.LinearAxis.init (
-        Title = "x",
+        Title = "x-Axis",
         Showgrid = true,
         Showline = true,
         Mirror = StyleParam.Mirror.AllTicks,
@@ -19,7 +19,7 @@ let myXAxis () =
 
 let myYAxis (yMin, yMax) =
     Axis.LinearAxis.init (
-        Title = "y",
+        Title = "y-Axis",
         Showgrid = true,
         Showline = true,
         Mirror = StyleParam.Mirror.AllTicks,
