@@ -7,11 +7,11 @@
 
   <ItemGroup>
     <Compile Include="StylingAxes.fs" />
-    <Compile Include="CheckingPlotly.fs" />
     <Compile Include="ScatterPoints.fs" />
     <Compile Include="PolarPoints.fs" />
     <None Include="GettingStarted.fsx" />
     <Compile Include="GetttingStarted.fs" />
+    <Compile Include="CheckingPlotly.fs" />
     <Compile Include="ScatterPlot.fs" />
     <Compile Include="PolarPlot.fs" />
     <Compile Include="CombinedPlot.fs" />
