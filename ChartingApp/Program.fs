@@ -19,7 +19,7 @@ open SurfacePlot
 let main argv =
 
     // Two-Dimensional Plot
-    oscillatoryFunc.Show()
+    //oscillatoryFunc.Show()
     //scatterPlot.Show()
     //spline |> Chart.Show 
     //splineWithMoreControl |> Chart.Show
@@ -39,7 +39,7 @@ let main argv =
     //rollerCoaster.Show()
     //hat.Show()
     //cone.Show()
-    //paraboloid.Show()
+    paraboloid.Show()
     //hyperboloid.Show()
 
     0

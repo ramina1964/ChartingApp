@@ -13,7 +13,6 @@ let xMinMax = (xMin, xMax)
 
 // X-axis for oscillatory function
 let xOscData = linspace2(-20., 20., 0.05)
-//let xOscData = linspace(-20., 20., 801)
 
 // Construct y-axes of 2D-plots
 let cosData = xData |> List.map Math.Cos
@@ -21,13 +20,12 @@ let sineData = xData |> List.map Math.Sin
 let oscPoints xValues = [for x in xValues -> x, (Math.Sin(x) / x)]
 
 // Construct x- and y-axes for 3D surface plots
-let size = 51
 let xMax3D = 5.
 let xMin3D = -5.
 let yMax3D = 5.
 let yMin3D = -5.
-let xAxis3D = linspace(xMin3D, xMax3D, size)
-let yAxis3D = linspace(yMin3D, yMax3D, size)
+let xAxis3D = linspace2(xMin3D, xMax3D, inc)
+let yAxis3D = linspace2(yMin3D, yMax3D, inc)
 
 // Given x-values, y-values and a function, return z-coordinates of the function
 let zCoord func xValues yValues = 
@@ -42,8 +40,9 @@ let HyperboloidSur (x: float) (y: float) = x ** 2. - y ** 2.
 
 // Linearly spaced x-, and y-axes for RollerCoaster Function
 let sizeRollerCoaster = 100
-let xRollerCoaster = linspace(-5., 5., sizeRollerCoaster)
-let yRollerCoaster = linspace(-5., 5., sizeRollerCoaster)
+let incRollerCoaster = 0.1
+let xRollerCoaster = linspace2(xMin3D, xMax3D, incRollerCoaster)
+let yRollerCoaster = linspace2(-5., 5., incRollerCoaster)
 
 
 // Apply zCoord Function to the surfaces above 

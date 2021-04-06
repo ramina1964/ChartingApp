@@ -61,7 +61,7 @@ let mirroredSinChart =
 // Sine and cosine functions. They have the same yMin and yMax.
 let xOscExpMin = -3.16
 let xOscExpMax = 2.5
-let xOscExpData = linspace(xOscExpMin, xOscExpMax, 2501)
+let xOscExpData = linspace2(xOscExpMin, xOscExpMax, 0.002264)
 let yOscExpData = xOscExpData |> Array.map (fun x -> Math.Exp(-x) * Math.Sin(x) )
 let yOscExpMin = yOscExpData |> Array.min
 let yOscExpMax = yOscExpData |> Array.max

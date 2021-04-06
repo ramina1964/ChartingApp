@@ -45,5 +45,7 @@ let rollerCoaster =
     |> Chart.Plot
     |> Chart.WithId("Roller Coaster")
     |> Chart.WithTitle("Roller Coaster")
+    |> Chart.WithWidth 580
+    |> Chart.WithHeight 580
 
 
