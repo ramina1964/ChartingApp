@@ -6,7 +6,7 @@ open MathFunctions
 
 
 // Mirrored x-axis
-let myXAxis xMin =
+let myXAxis (xMin, xMax) =
     Axis.LinearAxis.init (
         Title = "x-Axis",
         Showgrid = true,
@@ -14,7 +14,7 @@ let myXAxis xMin =
         Mirror = StyleParam.Mirror.AllTicks,
         Range = StyleParam.Range.MinMax(xMinMax),
         Tickmode = StyleParam.TickMode.Array,
-        Tickvals = ([xMin .. 0.5 .. -xMin] |> (List.map roundedFunc)),
+        Tickvals = ([xMin .. 0.5 .. xMax] |> (List.map roundFunc)),
         Ticks = StyleParam.TickOptions.Inside
     )
 

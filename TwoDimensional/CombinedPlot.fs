@@ -5,8 +5,8 @@ open MathFunctions
 open StylingAxes
 
 
-let yMinSin = sineData |> List.min
-let yMaxSin = sineData |> List.max
+let yMinSinAndCos = sineData |> List.min
+let yMaxSinAndCos = sineData |> List.max
 
 // Combining Charts in the same plot
 let combinedSinCos =
@@ -15,22 +15,22 @@ let combinedSinCos =
         Chart.Spline(xData, xData |> List.map cos, Name = "cos(x)")
     ]
     |> Chart.Combine
-    |> Chart.withTitle ("sin(x) and cos(x)")
-    |> Chart.withX_Axis (myXAxis xMin)
-    |> Chart.withY_Axis (myYAxis (yMinSin, yMaxSin))
+    |> Chart.withTitle ("f(x) = sin(x) and g(x) = cos(x)")
+    |> Chart.withX_Axis (myXAxis (xMin, xMax))
+    |> Chart.withY_Axis (myYAxis (yMinSinAndCos, yMaxSinAndCos))
     |> Chart.withSize (750., 750.)
 
 // Stacking Charts above each other
 let stackedSinCos = 
     [
         Chart.Spline(xData, xData |> List.map sin)
-        |> Chart.withTraceName(Name="sin(x)")
-        |> Chart.withX_Axis(myXAxis xMin)
-        |> Chart.withY_Axis(myYAxis (yMinSin, yMaxSin))
+        |> Chart.withTraceName(Name="f(x) = sin(x)")
+        |> Chart.withX_Axis(myXAxis (xMin, xMax))
+        |> Chart.withY_Axis(myYAxis (yMinSinAndCos, yMaxSinAndCos))
 
         Chart.Spline(xData, xData|> List.map cos)
-        |> Chart.withTraceName(Name="cos(x)")
-        |> Chart.withX_Axis(myXAxis xMin)
-        |> Chart.withY_Axis(myYAxis (yMinSin, yMaxSin))
+        |> Chart.withTraceName(Name="g(x) = cos(x)")
+        |> Chart.withX_Axis(myXAxis (xMin, xMax))
+        |> Chart.withY_Axis(myYAxis (yMinSinAndCos, yMaxSinAndCos))
     ]
     |> Chart.Stack(1, 0.20)

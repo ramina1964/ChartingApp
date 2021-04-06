@@ -7,18 +7,18 @@ open Utility
 // Construct x-axis for 2D-plots 
 let xMin = -Math.PI
 let xMax = Math.PI
-let steplength = 0.04
-let xData = [xMin .. steplength .. xMax]
+let inc = 0.04
+let xData = [xMin .. inc .. xMax]
 let xMinMax = (xMin, xMax)
 
 // X-axis for oscillatory function
-let xOscData = linspace(-20., 20., 801)
+let xOscData = linspace2(-20., 20., 0.05)
+//let xOscData = linspace(-20., 20., 801)
 
 // Construct y-axes of 2D-plots
 let cosData = xData |> List.map Math.Cos
 let sineData = xData |> List.map Math.Sin
 let oscPoints xValues = [for x in xValues -> x, (Math.Sin(x) / x)]
-
 
 // Construct x- and y-axes for 3D surface plots
 let size = 51

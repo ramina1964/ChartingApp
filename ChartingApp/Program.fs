@@ -19,7 +19,7 @@ open SurfacePlot
 let main argv =
 
     // Two-Dimensional Plot
-    //oscillatoryFunc.Show()
+    oscillatoryFunc.Show()
     //scatterPlot.Show()
     //spline |> Chart.Show 
     //splineWithMoreControl |> Chart.Show
@@ -28,8 +28,8 @@ let main argv =
     //sinePlotStyled |> Chart.Show
     //mirroredSinChart |> Chart.Show
     //combinedSinCos |> Chart.Show
-    stackedSinCos |> Chart.Show
-    mirroredOscExpChart |> Chart.Show
+    //stackedSinCos |> Chart.Show
+    //mirroredOscExpChart |> Chart.Show
 
     // Three-Dimensional Curve plot
     //helix |> Chart.Show
