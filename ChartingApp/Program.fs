@@ -38,7 +38,7 @@ let main argv =
     //random3dChart.Show()
     
      // Three-Dimensional Surface and Mesh plot
-    //rollerCoaster.Show()
+    rollerCoaster.Show()
     //hat.Show()
     //cone.Show()
     //paraboloid.Show()

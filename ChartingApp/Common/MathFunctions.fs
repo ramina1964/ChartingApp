@@ -6,12 +6,11 @@ open type System.Math
 open Utility
 
 // Titles of Surface Functions
-let RollerCoasterTitle = "-5x / (x^2 + y^2 + 1"
 let hatTitle = "z = Sin(Sqrt(x^2 + y^2))"
 let ConeTitle = "z = Sqrt(x^2 + y^2)"
 let ParaboloidTitle = "z = x^2 + y^2"
 let HyperboloidTitle = "z = x^2 - y^2"
-
+let RollerCoasterTitle = "z = -5x / (x^2 + y^2 + 1)"
 
 // Construct x-axis for 2D-plots 
 let xMin = -PI
@@ -42,6 +41,7 @@ let zCoord func xValues yValues =
         [ for y in yValues -> (func x y) ]]
 
 // Some 3D surface functions
+let RollerCoasterSur x y = -(5. * x / (x**2. + y**2. + 1.))
 let HatSur x y = Sin(Sqrt(x ** 2. + y ** 2.))
 let ConeSur x y = Sqrt(x ** 2. + y ** 2.)
 let ParaboloidSur x y = x ** 2. + y ** 2.
@@ -53,9 +53,11 @@ let incRollerCoaster = 0.1
 let xRollerCoaster = linspace2(xMin3D, xMax3D, incRollerCoaster)
 let yRollerCoaster = linspace2(-5., 5., incRollerCoaster)
 
-
 // Apply zCoord Function to the surfaces above 
 let zHat xValues yValues = zCoord HatSur xValues yValues
 let zCone xValues yValues = zCoord ConeSur xValues yValues
 let zParaboloid xValues yValues = zCoord ParaboloidSur xValues yValues
 let zHyperboloid xValues yValues = zCoord HyperboloidSur xValues yValues
+let zRollerCoaster = 
+    Array.init sizeRollerCoaster (fun i -> 
+        Array.init sizeRollerCoaster (fun j -> RollerCoasterSur xRollerCoaster.[j] yRollerCoaster.[i] ))

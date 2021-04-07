@@ -1,9 +1,5 @@
 ﻿module SurfacePlotTemplate
 
-// Include the following load instructions in a Script File
-//#r "../../bin/XPlot.Plotly/netstandard2.0/XPlot.Plotly.dll"
-//#r "../../packages/Newtonsoft.Json/lib/netstandard2.0/Newtonsoft.Json.dll"
-
 open System
 open XPlot.Plotly
 open MathFunctions
@@ -24,10 +20,10 @@ let random3dChart =
     |> Chart.WithWidth 700
     |> Chart.WithHeight 500
 
-let RollerCoasterSur x y = - (5. * x / (x**2. + y**2. + 1. ))
-let zRollerCoaster = 
-    Array.init sizeRollerCoaster (fun i -> 
-        Array.init sizeRollerCoaster (fun j -> RollerCoasterSur xRollerCoaster.[j] yRollerCoaster.[i] ))
+//let RollerCoasterSur x y = - (5. * x / (x**2. + y**2. + 1. ))
+//let zRollerCoaster = 
+//    Array.init sizeRollerCoaster (fun i -> 
+//        Array.init sizeRollerCoaster (fun j -> RollerCoasterSur xRollerCoaster.[j] yRollerCoaster.[i] ))
 
 let rollerCoaster = 
     Surface(z = zRollerCoaster)
