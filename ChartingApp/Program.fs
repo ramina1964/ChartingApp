@@ -21,7 +21,7 @@ let main argv =
     // Two-Dimensional Plots: Type XPlot.PLotly.PloylyChart
     //oscillatoryFunc.Show()
     //scatterPlot.Show()
-    //polarChart.Show()
+    polarChart.Show()
 
     // Two-Dimensional Plots of type GenericChart:GenericChart
     spline |> Chart.Show 
