@@ -49,8 +49,8 @@ let mirroredSinChart =
         Symbol = StyleParam.Symbol.Square
     )
     |> Chart.withTitle ("sin(x) with Mirror Axes")
-    |> Chart.withX_Axis (MirroredXAxis(xMin, xMax))
-    |> Chart.withY_Axis (MirroredYAxis(ySineMin, ySineMax))
+    |> Chart.withX_Axis (AxisX(xMin, xMax))
+    |> Chart.withY_Axis (AxisY(ySineMin, ySineMax))
     |> Chart.withSize (750., 750.)
 
 // Sine and cosine functions. They have the same yMin and yMax.
@@ -75,6 +75,6 @@ let mirroredOscExpChart =
         Symbol = StyleParam.Symbol.Square
     )
     |> Chart.withTitle ("y = exp(-x) * sin(x)")
-    |> Chart.withX_Axis (MirroredXAxis(xOscExpMin, xOscExpMax))
-    |> Chart.withY_Axis (MirroredYAxis(yOscExpMin, yOscExpMax))
+    |> Chart.withX_Axis (AxisX(xOscExpMin, xOscExpMax))
+    |> Chart.withY_Axis (AxisY(yOscExpMin, yOscExpMax))
     |> Chart.withSize (750., 750.)

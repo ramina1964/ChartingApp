@@ -16,8 +16,8 @@ let combinedSinCos =
     ]
     |> Chart.Combine
     |> Chart.withTitle ("f(x) = sin(x) and g(x) = cos(x)")
-    |> Chart.withX_Axis (MirroredXAxis (xMin, xMax))
-    |> Chart.withY_Axis (MirroredYAxis (yMinSinAndCos, yMaxSinAndCos))
+    |> Chart.withX_Axis (AxisX (xMin, xMax))
+    |> Chart.withY_Axis (AxisY (yMinSinAndCos, yMaxSinAndCos))
     |> Chart.withSize (750., 750.)
 
 // Stacking Charts above each other
@@ -25,12 +25,12 @@ let stackedSinCos =
     [
         Chart.Spline(xData, xData |> List.map sin)
         |> Chart.withTraceName(Name="f(x) = sin(x)")
-        |> Chart.withX_Axis(MirroredXAxis (xMin, xMax))
-        |> Chart.withY_Axis(MirroredYAxis (yMinSinAndCos, yMaxSinAndCos))
+        |> Chart.withX_Axis(AxisX (xMin, xMax))
+        |> Chart.withY_Axis(AxisY (yMinSinAndCos, yMaxSinAndCos))
 
         Chart.Spline(xData, xData|> List.map cos)
         |> Chart.withTraceName(Name="g(x) = cos(x)")
-        |> Chart.withX_Axis(MirroredXAxis (xMin, xMax))
-        |> Chart.withY_Axis(MirroredYAxis (yMinSinAndCos, yMaxSinAndCos))
+        |> Chart.withX_Axis(AxisX (xMin, xMax))
+        |> Chart.withY_Axis(AxisY (yMinSinAndCos, yMaxSinAndCos))
     ]
     |> Chart.Stack(1, 0.20)

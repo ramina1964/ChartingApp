@@ -5,7 +5,7 @@ open XPlot.Plotly
 
 
 // Mirrored x-axis
-let MirroredXAxis (xMin, xMax) =
+let AxisX (xMin, xMax) =
     Axis.LinearAxis.init (
         Title = "x-Axis",
         Showgrid = true,
@@ -16,7 +16,7 @@ let MirroredXAxis (xMin, xMax) =
         Ticks = StyleParam.TickOptions.Inside
     )
 
-let MirroredYAxis (yMin, yMax) =
+let AxisY (yMin, yMax) =
     Axis.LinearAxis.init (
         Title = "y-Axis",
         Showgrid = true,
