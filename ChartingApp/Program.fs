@@ -24,8 +24,8 @@ let main argv =
     //polarChart.Show()
 
     // Two-Dimensional Plots of type GenericChart:GenericChart
-    spline |> Chart.Show 
-    splineWithMoreControl |> Chart.Show
+    //spline |> Chart.Show 
+    //splineWithMoreControl |> Chart.Show
     //cosPlotStyled |> Chart.Show
     //sinePlotStyled |> Chart.Show
     //mirroredSinChart |> Chart.Show

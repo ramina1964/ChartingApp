@@ -6,6 +6,7 @@ open type System.Math
 open Utility
 
 // Titles of Surface Functions
+let RollerCoasterTitle = "-5x / (x^2 + y^2 + 1"
 let hatTitle = "z = Sin(Sqrt(x^2 + y^2))"
 let ConeTitle = "z = Sqrt(x^2 + y^2)"
 let ParaboloidTitle = "z = x^2 + y^2"

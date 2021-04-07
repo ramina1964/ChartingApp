@@ -7,6 +7,7 @@
 open System
 open XPlot.Plotly
 open MathFunctions
+open StylingPlot
 
 
 let z =
@@ -15,16 +16,11 @@ let z =
         [ for _ in 1 .. 25 ->
             rnd.Next(0, 400) ]]
 
-let layout =
-    Layout(
-        autosize = false,
-        margin = Margin(l = 65., r = 50., b = 65., t = 90.))
-
 let random3dChart =
     Surface(z = z)
     |> Chart.Plot
-    |> Chart.WithId("3D Random-Walk")
-    |> Chart.WithLayout layout
+    |> Chart.WithId("3D Random Chart")
+    |> Chart.WithLayout (layout "3D Random Chart")
     |> Chart.WithWidth 700
     |> Chart.WithHeight 500
 
@@ -37,7 +33,7 @@ let rollerCoaster =
     Surface(z = zRollerCoaster)
     |> Chart.Plot
     |> Chart.WithId("Roller Coaster")
-    |> Chart.WithTitle("Roller Coaster")
+    |> Chart.WithLayout (layout RollerCoasterTitle)
     |> Chart.WithWidth 580
     |> Chart.WithHeight 580
 
