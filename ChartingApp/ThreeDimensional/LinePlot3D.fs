@@ -1,11 +1,10 @@
 ﻿module LinePlot3D
 
 open FSharp.Plotly
-open XPlot.Plotly
 open System
 
 
-let c = [ 0. .. 0.25 .. 15. ]
+let c = [0. .. 0.25 .. 15.]
 
 let x, y, z =
     c
@@ -18,9 +17,10 @@ let x, y, z =
 
 let helix =
     Chart.Scatter3d(x, y, z, StyleParam.Mode.Lines_Markers)
-    |> Chart.withX_AxisStyle ("x-axis")
-    |> Chart.withY_AxisStyle ("y-axis")
-    |> Chart.withZ_AxisStyle ("z-axis")
+    |> Chart.withTitle("Helix")
+    |> Chart.withX_AxisStyle ("x-axis", Showgrid = true)
+    |> Chart.withY_AxisStyle ("y-axis", Showline = true)
+    |> Chart.withZ_AxisStyle ("z-axis", Showline = true)
     |> Chart.withSize (800., 800.)
 
 

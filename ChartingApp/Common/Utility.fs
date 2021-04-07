@@ -1,7 +1,8 @@
 ﻿module Utility
 
 
-// Given min, max and no > 2, return an array of floating point numbers of size noOfPts between min and max, inclusively.
+// Given min, max and an int no > 2, return an array of floating point numbers of size noOfPts
+// between min and max, inclusively.
 let linspace (min, max, n) = 
     if max <= min then failwithf "Following condition must be satisfied: max > min"
     if n <= 2 then failwithf "Following condition must be satisfied: n > 2"

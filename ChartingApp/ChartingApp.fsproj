@@ -10,9 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\ScatterPoints.txt" />
     <Compile Include="Common\Utility.fs" />
     <Compile Include="Common\MathFunctions.fs" />
-    <Compile Include="Common\StylingAxes.fs" />
+    <Compile Include="Common\StylingPlot.fs" />
     <Compile Include="TwoDimensional\PolarPoints.fs" />
     <Compile Include="TwoDimensional\ScatterPoints.fs" />
     <Compile Include="TwoDimensional\ScatterPlot.fs" />
@@ -26,6 +27,8 @@
     <Compile Include="ThreeDimensional\SurfacePlots.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
+
+  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="FSharp.Plotly" Version="1.2.2" />

@@ -2,20 +2,14 @@
 
 open XPlot.Plotly
 open MathFunctions
+open StylingPlot
 
- 
-let layout =
-    Layout(
-        autosize = false,
-        margin = Margin(l = 65., r = 50., b = 65., t = 90.)
-    )
 
 let hat =
     Surface(z = (zHat xAxis3D yAxis3D))
     |> Chart.Plot
     |> Chart.WithId("Mexican Hat")
-    |> Chart.WithTitle("Mexican Hat")
-    |> Chart.WithLayout layout
+    |> Chart.WithLayout (layout hatTitle)
     |> Chart.WithWidth 1000
     |> Chart.WithHeight 1000
 
@@ -23,8 +17,7 @@ let cone =
     Surface(z = (zCone xAxis3D yAxis3D))
     |> Chart.Plot
     |> Chart.WithId("Cone")
-    |> Chart.WithTitle("Cone")
-    |> Chart.WithLayout layout
+    |> Chart.WithLayout (layout ConeTitle)
     |> Chart.WithWidth 1000
     |> Chart.WithHeight 1000
     
@@ -32,8 +25,7 @@ let paraboloid =
     Surface(z = (zParaboloid xAxis3D yAxis3D))
     |> Chart.Plot
     |> Chart.WithId("Paraboloid")
-    |> Chart.WithTitle("Paraboloid")
-    |> Chart.WithLayout layout
+    |> Chart.WithLayout (layout ParaboloidTitle)
     |> Chart.WithWidth 1000
     |> Chart.WithHeight 1000
 
@@ -41,8 +33,6 @@ let hyperboloid =
     Surface(z = zHyperboloid xAxis3D yAxis3D)
     |> Chart.Plot
     |> Chart.WithId("Hyperboloid")
-    |> Chart.WithTitle("Hyperboloid")
-    |> Chart.WithLayout layout
+    |> Chart.WithLayout (layout HyperboloidTitle)
     |> Chart.WithWidth 1000
     |> Chart.WithHeight 1000
-    

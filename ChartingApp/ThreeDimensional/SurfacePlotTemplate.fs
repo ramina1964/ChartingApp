@@ -18,22 +18,15 @@ let z =
 let layout =
     Layout(
         autosize = false,
-        margin =
-            Margin(
-                l = 65.,
-                r = 50.,
-                b = 65.,
-                t = 90.))
+        margin = Margin(l = 65., r = 50., b = 65., t = 90.))
 
 let random3dChart =
     Surface(z = z)
     |> Chart.Plot
     |> Chart.WithId("3D Random-Walk")
-    |> Chart.WithTitle("3D Random-Walk")
     |> Chart.WithLayout layout
     |> Chart.WithWidth 700
     |> Chart.WithHeight 500
-
 
 let RollerCoasterSur x y = - (5. * x / (x**2. + y**2. + 1. ))
 let zRollerCoaster = 

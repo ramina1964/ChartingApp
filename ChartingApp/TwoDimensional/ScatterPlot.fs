@@ -15,7 +15,9 @@ let layout =
     Layout(title = "Hobbs-Pearson Trials", showlegend = false, plot_bgcolor = "rgb(220, 220, 220)")
 
 let scatterPlot =
-    traces |> Chart.Plot |> Chart.WithLayout layout
+    traces
+    |> Chart.Plot
+    |> Chart.WithLayout layout
 
 // Spline Interpolation of Data Points
 let x = [ 1. .. 1. .. 10. ]
@@ -31,7 +33,10 @@ let splineLayout =
 let spline =
     Chart.Spline(x, y, Name = "spline")
 
+//let splineInterpolation = "Spline Interpolation"
+
 let splineWithMoreControl =
     Chart.Spline(x, y,
                 Name = "spline",
                 Smoothing = 0.4)
+

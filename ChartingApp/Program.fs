@@ -18,12 +18,14 @@ open SurfacePlot
 [<EntryPoint>]
 let main argv =
 
-    // Two-Dimensional Plot
+    // Two-Dimensional Plots: Type XPlot.PLotly.PloylyChart
     //oscillatoryFunc.Show()
     //scatterPlot.Show()
-    //spline |> Chart.Show 
-    //splineWithMoreControl |> Chart.Show
     //polarChart.Show()
+
+    // Two-Dimensional Plots of type GenericChart:GenericChart
+    spline |> Chart.Show 
+    splineWithMoreControl |> Chart.Show
     //cosPlotStyled |> Chart.Show
     //sinePlotStyled |> Chart.Show
     //mirroredSinChart |> Chart.Show
@@ -32,14 +34,14 @@ let main argv =
     //mirroredOscExpChart |> Chart.Show
 
     // Three-Dimensional Curve plot
-    helix |> Chart.Show
-    random3dChart.Show()
+    //helix |> Chart.Show
+    //random3dChart.Show()
     
-    // Three-Dimensional Surface and Mesh plot
-    rollerCoaster.Show()
-    hat.Show()
-    cone.Show()
-    paraboloid.Show()
-    hyperboloid.Show()
+     // Three-Dimensional Surface and Mesh plot
+    //rollerCoaster.Show()
+    //hat.Show()
+    //cone.Show()
+    //paraboloid.Show()
+    //hyperboloid.Show()
 
     0

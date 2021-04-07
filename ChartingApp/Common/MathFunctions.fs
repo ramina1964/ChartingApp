@@ -1,12 +1,20 @@
 ﻿module MathFunctions
 
-open System
+// This opens the whole Syatem.Math.
+// After this prefixing attributes in the library with System.Math and Math is illegal.
+open type System.Math
 open Utility
+
+// Titles of Surface Functions
+let hatTitle = "z = Sin(Sqrt(x^2 + y^2))"
+let ConeTitle = "z = Sqrt(x^2 + y^2)"
+let ParaboloidTitle = "z = x^2 + y^2"
+let HyperboloidTitle = "z = x^2 - y^2"
 
 
 // Construct x-axis for 2D-plots 
-let xMin = -Math.PI
-let xMax = Math.PI
+let xMin = -PI
+let xMax = PI
 let inc = 0.04
 let xData = [xMin .. inc .. xMax]
 let xMinMax = (xMin, xMax)
@@ -15,9 +23,9 @@ let xMinMax = (xMin, xMax)
 let xOscData = linspace2(-20., 20., 0.05)
 
 // Construct y-axes of 2D-plots
-let cosData = xData |> List.map Math.Cos
-let sineData = xData |> List.map Math.Sin
-let oscPoints xValues = [for x in xValues -> x, (Math.Sin(x) / x)]
+let cosData = xData |> List.map Cos
+let sineData = xData |> List.map Sin
+let oscPoints xValues = [for x in xValues -> x, (Sin(x) / x)]
 
 // Construct x- and y-axes for 3D surface plots
 let xMax3D = 5.
@@ -33,8 +41,8 @@ let zCoord func xValues yValues =
         [ for y in yValues -> (func x y) ]]
 
 // Some 3D surface functions
-let HatSur x y = Math.Sin(Math.Sqrt(x ** 2. + y ** 2.))
-let ConeSur x y = Math.Sqrt(x ** 2. + y ** 2.)
+let HatSur x y = Sin(Sqrt(x ** 2. + y ** 2.))
+let ConeSur x y = Sqrt(x ** 2. + y ** 2.)
 let ParaboloidSur x y = x ** 2. + y ** 2.
 let HyperboloidSur (x: float) (y: float) = x ** 2. - y ** 2.
 

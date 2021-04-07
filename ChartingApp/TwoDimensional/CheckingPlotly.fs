@@ -5,7 +5,7 @@ open FSharp.Plotly
 open System
 open MathFunctions
 open Utility
-open StylingAxes
+open StylingPlot
 
 
 // Do not use these options for Symbol, because the plot will vanish:
@@ -30,22 +30,17 @@ let cosPlotStyled =
     |> Chart.withX_AxisStyle ("x", Showline = true, Showgrid = true, MinMax = xMinMax)
     |> Chart.withY_AxisStyle ("y", Showline = true, Showgrid = true)
 
- // A more functional style
+// A more functional style
 let sinePlotStyled =
     Chart.Point(xData, sineData)
-    |> Chart.withMarkerStyle (
-        Size = 3,
-        Color = (Table.Office.red |> toWebColor),
-        Symbol = StyleParam.Symbol.Diamond
-    )
+    |> Chart.withMarkerStyle (Size = 3, Color = (Table.Office.red |> toWebColor), Symbol = StyleParam.Symbol.Diamond)
     |> Chart.withTitle ("sin(x)")
     |> Chart.withX_AxisStyle ("x", Showline = true, Showgrid = true, MinMax = xMinMax)
     |> Chart.withY_AxisStyle ("y", Showline = true, Showgrid = true)
 
-// Sine and cosine functions with mirrored axes
-// These functions have the same yMin and yMax
 let ySineMin = sineData |> List.min
 let ySineMax = sineData |> List.max
+
 let mirroredSinChart =
     Chart.Point(xData, sineData)
     |> Chart.withMarkerStyle (
@@ -54,17 +49,24 @@ let mirroredSinChart =
         Symbol = StyleParam.Symbol.Square
     )
     |> Chart.withTitle ("sin(x) with Mirror Axes")
-    |> Chart.withX_Axis (myXAxis (xMin, xMax))
-    |> Chart.withY_Axis (myYAxis (ySineMin, ySineMax))
+    |> Chart.withX_Axis (MirroredXAxis(xMin, xMax))
+    |> Chart.withY_Axis (MirroredYAxis(ySineMin, ySineMax))
     |> Chart.withSize (750., 750.)
 
 // Sine and cosine functions. They have the same yMin and yMax.
 let xOscExpMin = -3.16
 let xOscExpMax = 2.5
-let xOscExpData = linspace2(xOscExpMin, xOscExpMax, 0.002264)
-let yOscExpData = xOscExpData |> Array.map (fun x -> Math.Exp(-x) * Math.Sin(x) )
+
+let xOscExpData =
+    linspace2 (xOscExpMin, xOscExpMax, 0.002264)
+
+let yOscExpData =
+    xOscExpData
+    |> Array.map (fun x -> Math.Exp(-x) * Math.Sin(x))
+
 let yOscExpMin = yOscExpData |> Array.min
 let yOscExpMax = yOscExpData |> Array.max
+
 let mirroredOscExpChart =
     Chart.Point(xOscExpData, yOscExpData)
     |> Chart.withMarkerStyle (
@@ -73,6 +75,6 @@ let mirroredOscExpChart =
         Symbol = StyleParam.Symbol.Square
     )
     |> Chart.withTitle ("y = exp(-x) * sin(x)")
-    |> Chart.withX_Axis (myXAxis (xOscExpMin, xOscExpMax))
-    |> Chart.withY_Axis (myYAxis (yOscExpMin, yOscExpMax))
+    |> Chart.withX_Axis (MirroredXAxis(xOscExpMin, xOscExpMax))
+    |> Chart.withY_Axis (MirroredYAxis(yOscExpMin, yOscExpMax))
     |> Chart.withSize (750., 750.)

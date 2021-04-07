@@ -36,7 +36,7 @@ type HobbsPearsonTrial =
       Color: string }
 
 let HobbsPearson =
-    [ { Radial =
+    [ { Radial =        // Set No. 1
             [ 6.804985785265978
               3.389596010612268
               5.3814721107464445
@@ -162,7 +162,7 @@ let HobbsPearson =
 
         Color = "rgb(27, 158, 119)" }
 
-      { Radial =
+      { Radial =    // Set No. 2
             [ 3.488043923008057
               2.9184785763552368
               4.201827359971069
@@ -288,7 +288,7 @@ let HobbsPearson =
 
         Color = "rgb(217, 95, 2)" }
 
-      { Radial =
+      { Radial =    // Set No. 3
             [ 1.855870835032611
               5.2869620620428215
               3.886013391943573
@@ -414,7 +414,7 @@ let HobbsPearson =
 
         Color = "rgb(117, 112, 179)" }
 
-      { Radial =
+      { Radial =    // Set No. 4
             [ 5.3724709243191295
               7.096355572040467
               4.883823903200083
@@ -540,7 +540,7 @@ let HobbsPearson =
 
         Color = "rgb(231, 41, 138)" }
 
-      { Radial =
+      { Radial =    // Set No. 5
             [ 7.937557871379145
               7.302746491515634
               5.929302221442996
@@ -666,7 +666,7 @@ let HobbsPearson =
 
         Color = "rgb(102, 166, 30)" }
 
-      { Radial =
+      { Radial =    // Set No. 6
             [ 8.46918052789063
               5.821997567373959
               6.1409183282181425

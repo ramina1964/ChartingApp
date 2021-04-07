@@ -1,21 +1,22 @@
 ﻿// This is an example of interactive plotting from a script file.
-//#r "nuget: Newtonsoft.JSON, 13.0.1"
+#r "nuget: Newtonsoft.JSON, 12.0.3"
 
-// Path of XPlot.Plotly.dll relative to the solution file
-//#r "../ChartingApp/bin/Debug/net5.0/XPlot.Plotly.dll"
+// Loading packages FSharp.Plotly and XPlot.Plotly
+#r "nuget: FSharp.Plotly, 1.2.2"
+#r "nuget: XPlot.Plotly, 4.0.1"
 
-// Find out how to load modules used in this one
-//#l "../ChartingApp/Common/MathFunctions"
+open FSharp.Plotly
+open XPlot.Plotly
+open type System.Math
 
-//open FSharp.Plotly
-//open XPlot.Plotly
 
-//let xOscData = [-20. .. 0.02 .. 20.]
-//let oscPoints = [for x in xOscData -> x, (System.Math.Sin(x) / x)]
+let xOscData = [-20. .. 0.02 .. 20.]
+let oscPoints = [for x in xOscData -> x, (Sin x / x)]
 
-//// A line chart
-//let oscillatoryFunc =
-//        oscPoints
-//        |> Chart.Line
+// An oscillatory chart
+let oscillatoryFunc =
+        oscPoints
+        |> Chart.Line
 
-//oscillatoryFunc.Show()
+oscillatoryFunc.Show()
+
