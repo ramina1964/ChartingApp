@@ -5,7 +5,7 @@ open Utility
 open GetttingStarted
 open ScatterPlot
 open CheckingPlotly
-open PolarPlot
+open Chart.PolarPlot
 open CombinedPlot
 open CheckingPlotly
 
@@ -21,6 +21,7 @@ let main argv =
     // Two-Dimensional Plots: Type XPlot.PLotly.PloylyChart
     //oscillatoryFunc.Show()
     //scatterPlot.Show()
+    
     polarChart.Show()
 
     // Two-Dimensional Plots of type GenericChart:GenericChart
@@ -38,8 +39,8 @@ let main argv =
     //random3dChart.Show()
     
      // Three-Dimensional Surface and Mesh plot
-    //rollerCoaster.Show()
-    //hat.Show()
+    rollerCoaster.Show()
+    hat.Show()
     //cone.Show()
     //paraboloid.Show()
     //hyperboloid.Show()
