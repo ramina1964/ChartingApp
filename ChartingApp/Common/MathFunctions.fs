@@ -51,7 +51,7 @@ let HyperboloidSur (x: float) (y: float) = x ** 2. - y ** 2.
 let sizeRollerCoaster = 100
 let incRollerCoaster = 0.1
 let xRollerCoaster = linspace2(xMin3D, xMax3D, incRollerCoaster)
-let yRollerCoaster = linspace2(-5., 5., incRollerCoaster)
+let yRollerCoaster = linspace2(yMin3D, yMax3D, incRollerCoaster)
 
 // Apply zCoord Function to the surfaces above 
 let zHat xValues yValues = zCoord HatSur xValues yValues

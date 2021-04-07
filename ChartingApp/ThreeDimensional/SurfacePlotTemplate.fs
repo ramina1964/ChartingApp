@@ -20,11 +20,6 @@ let random3dChart =
     |> Chart.WithWidth 700
     |> Chart.WithHeight 500
 
-//let RollerCoasterSur x y = - (5. * x / (x**2. + y**2. + 1. ))
-//let zRollerCoaster = 
-//    Array.init sizeRollerCoaster (fun i -> 
-//        Array.init sizeRollerCoaster (fun j -> RollerCoasterSur xRollerCoaster.[j] yRollerCoaster.[i] ))
-
 let rollerCoaster = 
     Surface(z = zRollerCoaster)
     |> Chart.Plot

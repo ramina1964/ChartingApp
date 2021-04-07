@@ -5,7 +5,6 @@
 #r "nuget: FSharp.Plotly, 1.2.2"
 #r "nuget: XPlot.Plotly, 4.0.1"
 
-open FSharp.Plotly
 open XPlot.Plotly
 open type System.Math
 

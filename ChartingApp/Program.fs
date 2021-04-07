@@ -39,7 +39,7 @@ let main argv =
     
      // Three-Dimensional Surface and Mesh plot
     rollerCoaster.Show()
-    //hat.Show()
+    hat.Show()
     //cone.Show()
     //paraboloid.Show()
     //hyperboloid.Show()
